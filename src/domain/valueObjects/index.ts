@@ -1,0 +1,7 @@
+export * from './UserId'
+export * from './UserFirstName'
+export * from './UserLastName'
+export * from './UserEmail'
+export * from './UserCPF'
+export * from './UserGender'
+export * from './UserBirthdate'
