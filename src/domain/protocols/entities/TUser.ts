@@ -4,7 +4,7 @@ export namespace TUser {
     cpf: string
     fist_name: string,
     last_name: string,
-    birthdate: string,
+    birthdate: string | Date,
     email: string,
     gender: string
   }
@@ -14,7 +14,7 @@ export namespace TUser {
     cpf: string
     fist_name: string,
     last_name: string,
-    birthdate: string,
+    birthdate: string | Date,
     email: string,
     gender: string
   }
@@ -24,7 +24,7 @@ export namespace TUser {
     cpf?: string
     fist_name?: string,
     last_name?: string,
-    birthdate?: string,
+    birthdate?: string | Date,
     email?: string,
     gender?: string
   }
