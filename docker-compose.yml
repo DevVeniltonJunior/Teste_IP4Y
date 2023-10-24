@@ -1,0 +1,15 @@
+version: '3'
+services:
+  mysql:
+    image: mysql
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: senha_root123
+      MYSQL_DATABASE: enterprise
+      MYSQL_USER: bdUser
+      MYSQL_PASSWORD: senhaUser
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data:/var/lib/mysql
+      - ./src/infra/config/db/init.sql:/docker-entrypoint-initdb.d/init.sql
