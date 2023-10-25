@@ -44,7 +44,7 @@ export class UserDTO {
     return {
       id: this._userId.toNumber(),
       cpf: this._userCPF ? this._userCPF.toString() : undefined,
-      fist_name: this._userFistName ? this._userFistName.toString() : undefined,
+      first_name: this._userFistName ? this._userFistName.toString() : undefined,
       last_name: this._userLastName ? this._userLastName.toString() : undefined,
       birthdate: this._userBirthdate ? this._userBirthdate.toISO() : undefined,
       email: this._userEmail ? this._userEmail.toString() : undefined,

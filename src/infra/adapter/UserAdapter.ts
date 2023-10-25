@@ -8,7 +8,7 @@ export class UserAdapter {
     return new User(
       new UserId(model.id),
       new UserCPF(model.cpf),
-      new UserFirstName(model.fist_name),
+      new UserFirstName(model.first_name),
       new UserLastName(model.last_name),
       new UserBirthdate(model.birthdate),
       new UserEmail(model.email),
@@ -29,7 +29,7 @@ export class UserAdapter {
     return new UserDTO(
       new UserId(data.id),
       data.cpf ? new UserCPF(data.cpf) : undefined,
-      data.fist_name ? new UserFirstName(data.fist_name) : undefined,
+      data.first_name ? new UserFirstName(data.first_name) : undefined,
       data.last_name ? new UserLastName(data.last_name) : undefined,
       data.birthdate ? new UserBirthdate(data.birthdate) : undefined,
       data.email ? new UserEmail(data.email) : undefined,

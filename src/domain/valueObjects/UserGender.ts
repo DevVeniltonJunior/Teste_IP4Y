@@ -1,7 +1,7 @@
 import { InvalidParam } from '@/domain/exceptions'
 
 export class UserGender {
-  private readonly validValues = ['Male', 'Female', 'Transgender', 'Cisgender', 'Genderqueer', 'Genderfluid', 'Non-binary', 'Agender', 'Two-spirit', 'Androgynous', 'Bigender', 'Demigender', 'Gender nonconforming', 'Neutrois', 'Pangender', 'Third gender']
+  private readonly validValues = ['Masculino', 'Feminino', 'Transexual', 'Cisgênero', 'Gênero fluído', 'Não-binário', 'Agênero', 'Dois-espíritos', 'Andrógino', 'Bígênero', 'Demigênero', 'Gênero não conforming', 'Neutrois', 'Pangênero', 'Terceiro gênero']
 
   constructor(private readonly value: string) {
     if(!this.value || !this.isValid(this.value)) throw new InvalidParam('Gender')

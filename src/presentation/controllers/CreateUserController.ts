@@ -8,11 +8,13 @@ export class CreateUserController {
   public static async handle(req: TRoute.handleParams<TCreateUser.Request.body, TCreateUser.Request.params, TCreateUser.Request.query>): Promise<Response<TCreateUser.Response>> {
     const userParam = req.body
 
+    console.log(userParam)
+
     const repository = new UserCommandRepository()
     const createUser = new CreateUser(repository)
 
     try {
-      if(!userParam.id || !userParam.cpf || !userParam.fist_name || !userParam.last_name || !userParam.birthdate || !userParam.email || !userParam.gender) return {
+      if(!userParam.id || !userParam.cpf || !userParam.first_name || !userParam.last_name || !userParam.birthdate || !userParam.email || !userParam.gender) return {
         statusCode: 400,
         data: { message: 'Bad Request'}
       }
@@ -20,7 +22,7 @@ export class CreateUserController {
       const entity = await createUser.execute(new User(
         new UserId(userParam.id),
         new UserCPF(userParam.cpf),
-        new UserFirstName(userParam.fist_name),
+        new UserFirstName(userParam.first_name),
         new UserLastName(userParam.last_name),
         new UserBirthdate(userParam.birthdate),
         new UserEmail(userParam.email),
@@ -33,10 +35,10 @@ export class CreateUserController {
         statusCode: 201,
         data: entity.toJson()
       }
-    } catch {
+    } catch(err: any) {
       return {
         statusCode: 500,
-        data: { message: 'Server Error'}
+        data: err
       }
     }
   }

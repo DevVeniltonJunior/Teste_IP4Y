@@ -2,7 +2,7 @@ import { UserGender } from "@/domain/valueObjects"
 
 describe('[ValueObjects] UserGender', () => {
   
-  const validValue = ['Male', 'Female', 'Transgender']
+  const validValue = ['Masculino', 'Feminino', 'Transexual']
   const invalidValue = ['any', '', 'robot']
 
   validValue.map(value => {

@@ -17,10 +17,10 @@ export class DeleteUserController {
         statusCode: 200,
         data: { message: 'deleted' }
       }
-    } catch {
+    } catch(err) {
       return {
         statusCode: 500,
-        data: { message: 'Server Error'}
+        data: err
       }
     }
   }

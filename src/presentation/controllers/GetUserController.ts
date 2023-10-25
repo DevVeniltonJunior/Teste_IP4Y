@@ -15,10 +15,10 @@ export class GetUserController {
         statusCode: 200,
         data: entities.map(entity => entity.toJson())
       }
-    } catch {
+    } catch(err) {
       return {
         statusCode: 500,
-        data: { message: 'Server Error'}
+        data: err
       }
     }
   }

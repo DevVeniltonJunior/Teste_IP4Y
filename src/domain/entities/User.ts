@@ -44,7 +44,7 @@ export class User {
     return {
       id: this._userId.toNumber(),
       cpf: this._userCPF.toString(),
-      fist_name: this._userFistName.toString(),
+      first_name: this._userFistName.toString(),
       last_name: this._userLastName.toString(),
       birthdate: this._userBirthdate.toISO(),
       email: this._userEmail.toString(),

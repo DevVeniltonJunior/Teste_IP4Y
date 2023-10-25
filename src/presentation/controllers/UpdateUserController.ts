@@ -15,7 +15,7 @@ export class UpdateUserController {
       await updateUser.execute(new UserDTO(
         new UserId(userParam.id),
         userParam.cpf ? new UserCPF(userParam.cpf) : undefined,
-        userParam.fist_name ? new UserFirstName(userParam.fist_name) : undefined,
+        userParam.first_name ? new UserFirstName(userParam.first_name) : undefined,
         userParam.last_name ? new UserLastName(userParam.last_name) : undefined,
         userParam.birthdate ? new UserBirthdate(userParam.birthdate) : undefined,
         userParam.email ? new UserEmail(userParam.email) : undefined,
@@ -26,10 +26,10 @@ export class UpdateUserController {
         statusCode: 200,
         data: { message: 'Updated' }
       }
-    } catch {
+    } catch(err) {
       return {
         statusCode: 500,
-        data: { message: 'Server Error'}
+        data: err
       }
     }
   }
