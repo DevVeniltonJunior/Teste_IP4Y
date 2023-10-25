@@ -18,11 +18,12 @@ export class UserCommandRepository implements IUserCommandRepository {
   }
 
   async update (dto: UserDTO): Promise<void> {
+    const id = dto.getId()
     const partialModel = UserAdapter.toPartialModel(dto)
 
     delete (<any>partialModel).id
 
-    await this.databaseAdapter.update(dto.getId().toNumber(), partialModel)
+    await this.databaseAdapter.update(id.toNumber(), partialModel)
   }
 
   async delete (id: UserId): Promise<void> {

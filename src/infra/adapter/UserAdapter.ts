@@ -21,6 +21,7 @@ export class UserAdapter {
   }
 
   public static toPartialModel(dto: UserDTO): Partial<TUser.Model> {
+    console.log(dto)
     return dto.toJson()
   }
 

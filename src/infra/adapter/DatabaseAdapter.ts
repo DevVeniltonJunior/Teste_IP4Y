@@ -1,10 +1,14 @@
-import { TUser } from "@/domain/protocols";
-import { PrismaClient } from "@prisma/client";
+import { TUser } from '@/domain/protocols'
+import { PrismaClient } from '@prisma/client'
+import { InfraException } from '@/infra/exceptions'
 
 export class DatabaseAdapter {
   private readonly _repo = new PrismaClient()
 
   async create(data: TUser.Entity): Promise<TUser.Model> {
+    const userExists = await this._repo.user.findUnique({where: {cpf: data.cpf}})
+    if(userExists) throw new InfraException('User already exists')
+
     return await this._repo.user.create({data})
   }
 

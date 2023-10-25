@@ -6,7 +6,7 @@ export class UserCPF {
   }
 
   private isValid(value: string): boolean {
-    const regex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/
+    const regex = /\d{11}/
     return regex.test(value)
   }
 
