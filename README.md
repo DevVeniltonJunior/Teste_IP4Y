@@ -17,14 +17,14 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de dese
 
 1. Clone o repositório.
 
-   ```bash
+  ```bash
    git clone https://github.com/seu-usuario/seu-projeto.git
    cd seu-projeto
   ```
 
 2. Instale as dependências.
 
-   ```bash
+  ```bash
    npm install
   ```
 
