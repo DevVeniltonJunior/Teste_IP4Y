@@ -18,7 +18,7 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de dese
 1. Clone o repositório.
 
   ```bash
-   git clone https://github.com/seu-usuario/seu-projeto.git
+   git clone https://github.com/DevVeniltonJunior/Teste_IP4Y_backend.git
    cd seu-projeto
   ```
 
