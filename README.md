@@ -40,7 +40,7 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de dese
     npm run prisma:resolve
   ```
 
-  4.1 Sera necessario truncar a tabela de migrations no banco de dados, apos execute o comando:
+  4.1 Será necessário truncar a tabela de migrations no banco de dados, após execute o comando:
 
    ```bash
     npm run prisma:apply
