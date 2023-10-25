@@ -13,7 +13,7 @@ export class GetUserController {
   
       return {
         statusCode: 200,
-        data: entities
+        data: entities.map(entity => entity.toJson())
       }
     } catch {
       return {

@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "_moduleAliases": {
+    "@": "dist"
+  },
   "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig-build.json",
+    "dev": "npm run build && node ./dist/infra/config/server/App",
+    "eslint": "npx eslint .",
     "prisma:migration": "npx prisma migrate dev --name",
     "prisma:resolve": "prisma migrate resolve --applied 20231024043355_init",
     "prisma:apply": "prisma migrate deploy && prisma generate",

@@ -26,10 +26,12 @@ export class CreateUserController {
         new UserEmail(userParam.email),
         new UserGender(userParam.gender)
       ))
+
+      console.log(entity)
   
       return {
         statusCode: 201,
-        data: entity
+        data: entity.toJson()
       }
     } catch {
       return {

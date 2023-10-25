@@ -2,7 +2,6 @@ import 'module-alias/register'
 import express from 'express'
 import { router } from './Router'
 
-
 const app = express()
 
 app.use(express.json())
