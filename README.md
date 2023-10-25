@@ -19,7 +19,7 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de dese
 
   ```bash
    git clone https://github.com/DevVeniltonJunior/Teste_IP4Y_backend.git
-   cd seu-projeto
+   cd Teste_IP4Y_backend
   ```
 
 2. Instale as dependências.
